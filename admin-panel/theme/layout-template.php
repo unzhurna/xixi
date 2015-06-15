@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="<?php echo config_item('asset'); ?>img/favicon.png">
-		<title>dsfdskjf</title>
+		<title>Administrator</title>
 		<link href="<?php echo config_item('asset'); ?>css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/font-awesome.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/style.css" rel="stylesheet">
@@ -24,28 +24,22 @@
 							<div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
 						</div>
 						<!--logo start-->
-						<a href="index.html" class="logo" >Flat<span>lab</span></a>
+						<a href="<?php echo site_url('/'); ?>" class="logo" >Flat<span>lab</span></a>
 						<!--logo end-->						
 						<div class="top-nav ">
 							<ul class="nav pull-right top-menu">
-								<li>
-									<input type="text" class="form-control search" placeholder="Search">
-								</li>
-								<!-- user login dropdown start-->
+                                <!-- user login dropdown start-->
 								<li class="dropdown userdata">
 									<a data-toggle="dropdown" class="dropdown-toggle" href="#"> <img alt="" src="img/avatar1_small.jpg"> <span class="username">Jhon Doue</span> <b class="caret"></b> </a>
 									<ul class="dropdown-menu">
                                         <li>
-											<a href="#"><i class=" icon-suitcase"></i>Profile</a>
+											<a href="#"><i class="icon-user"></i> Profile</a>
 										</li>
 										<li>
 											<a href="#"><i class="icon-cog"></i> Settings</a>
 										</li>
-										<li>
-											<a href="#"><i class="icon-bell-alt"></i> Notification</a>
-										</li>
-										<li>
-											<a href="login.html"><i class="icon-key"></i> Log Out</a>
+                                        <li>
+											<a href="<?php echo site_url('logout'); ?>"><i class="icon-signout"></i> Log Out</a>
 										</li>
 									</ul>
 								</li>
@@ -63,9 +57,8 @@
 							<li>
 								<a href="index.html"> <i class="icon-dashboard"></i> <span>Dashboard</span> </a>
 							</li>
-
 							<li class="sub-menu">
-								<a href="javascript:;" class="active"> <i class="icon-laptop"></i> <span>Layouts</span> </a>
+								<a href="javascript:;" class="active"> <i class="icon-laptop"></i><span>Test</span></a>
 								<ul class="sub">
 									<li class="active">
 										<a  href="boxed_page.html">Boxed Page</a>
@@ -93,13 +86,12 @@
 				<!--footer start-->
 				<footer class="site-footer">
 					<div class="text-center">
-						2013 &copy; FlatLab by VectorLab.
+						&copy; 2015 FlatLab by VectorLab.
 						<a href="#" class="go-top"> <i class="icon-angle-up"></i> </a>
 					</div>
 				</footer>
 				<!--footer end-->
 			</section>
-
 		</div>
 
 		<script src="<?php echo config_item('asset'); ?>js/jquery.js"></script>
