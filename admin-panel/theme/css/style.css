@@ -4453,25 +4453,25 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
 }
 
 
-/*language*/
+/*userdata*/
 
-.language {
+.userdata {
     margin-top: 4px;
 }
-.language .dropdown-menu {
+.userdata .dropdown-menu {
     border: 1px solid #eee;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.176) !important;
 }
-.language .dropdown-menu li a{
+.userdata .dropdown-menu li a{
     border-bottom: 1px solid #eee;
     padding: 10px;
 }
 
-.language .dropdown-menu li:last-child a {
+.userdata .dropdown-menu li:last-child a {
     border-bottom: none;
 }
 
-.language .dropdown-menu li a {
+.userdata .dropdown-menu li a {
     font-size: 13px;
 }
 

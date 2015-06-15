@@ -506,3 +506,4 @@ $config['proxy_ips'] = '';
 | Custom Config
 |--------------------------------------------------------------------------
 */
+$config['asset'] = $config['base_url'].'theme/';
