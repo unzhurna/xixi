@@ -10,7 +10,7 @@ class Dashboard extends CI_Controller {
 
 	function index()
 	{
-	    $data['content'] = 'Home';
+        $data['content'] = 'Home';
 		$this->load->view('layout-template', $data);
 	}
 

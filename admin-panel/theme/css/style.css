@@ -31,7 +31,6 @@ a, a:hover, a:focus {
     outline: none;
 }
 ::selection {
-
     background: #FF6C60;
     color: #fff;
 }
@@ -4148,6 +4147,16 @@ span.customSelect.changed {
 
 /*advanced table*/
 
+.tb-checkbox {
+	text-align: center;
+	width: 50px;	
+}
+
+.tb-action {
+	text-align: center;
+	width: 50px;	
+}
+
 .adv-table table tr td {
     padding: 10px;
 }
@@ -4179,12 +4188,13 @@ td.details table tr td, .dataTable tr:last-child {
 
 .adv-table .dataTables_filter label input {
     float: right;
-    margin-left: 10px;
-    width: 78%;
+    margin-left: -10px;
+    padding-left: 10px;
+    width: 150%;
 }
 
 .adv-table .dataTables_filter label {
-    line-height: 33px;
+    line-height: 30px;
     width: 100%;
 }
 

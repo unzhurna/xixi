@@ -7,6 +7,7 @@
 		<title>Administrator</title>
 		<link href="<?php echo config_item('asset'); ?>css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/font-awesome.css" rel="stylesheet">
+		<link href="<?php echo config_item('asset'); ?>css/DT_bootstrap.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/style.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/style-responsive.css" rel="stylesheet">
 		<!--[if lt IE 9]>
@@ -21,22 +22,22 @@
 				<header class="header white-bg">
 					<div class="container ">
 						<div class="sidebar-toggle-box">
-							<div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
+							<div title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
 						</div>
 						<!--logo start-->
-						<a href="<?php echo site_url('/'); ?>" class="logo" >Flat<span>lab</span></a>
+						<a href="<?php echo site_url('/'); ?>" class="logo"><?php echo config_item('company_name'); ?><span></span></a>
 						<!--logo end-->						
 						<div class="top-nav ">
 							<ul class="nav pull-right top-menu">
                                 <!-- user login dropdown start-->
 								<li class="dropdown userdata">
-									<a data-toggle="dropdown" class="dropdown-toggle" href="#"> <img alt="" src="img/avatar1_small.jpg"> <span class="username">Jhon Doue</span> <b class="caret"></b> </a>
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="username">Jhon Doue</span> <b class="caret"></b> </a>
 									<ul class="dropdown-menu">
                                         <li>
 											<a href="#"><i class="icon-user"></i> Profile</a>
 										</li>
 										<li>
-											<a href="#"><i class="icon-cog"></i> Settings</a>
+											<a href="<?php echo site_url('settings'); ?>"><i class="icon-cog"></i> Settings</a>
 										</li>
                                         <li>
 											<a href="<?php echo site_url('logout'); ?>"><i class="icon-signout"></i> Log Out</a>
@@ -55,7 +56,7 @@
 						<!-- sidebar menu start-->
 						<ul class="sidebar-menu" id="nav-accordion">
 							<li>
-								<a href="index.html"> <i class="icon-dashboard"></i> <span>Dashboard</span> </a>
+								<a href="<?php echo site_url('/'); ?>"><i class="icon-dashboard"></i> <span>Dashboard</span></a>
 							</li>
 							<li class="sub-menu">
 								<a href="javascript:;" class="active"> <i class="icon-laptop"></i><span>Test</span></a>
@@ -86,7 +87,7 @@
 				<!--footer start-->
 				<footer class="site-footer">
 					<div class="text-center">
-						&copy; 2015 FlatLab by VectorLab.
+						&copy; 2015 medialangit.com. All right reserved.
 						<a href="#" class="go-top"> <i class="icon-angle-up"></i> </a>
 					</div>
 				</footer>
@@ -100,6 +101,7 @@
 		<script src="<?php echo config_item('asset'); ?>js/jquery.scrollTo.min.js"></script>
 		<script src="<?php echo config_item('asset'); ?>js/jquery.nicescroll.js"></script>
 		<script src="<?php echo config_item('asset'); ?>js/respond.min.js" ></script>
+		<?php if($script) echo $script; ?>
         <script src="<?php echo config_item('asset'); ?>js/common-scripts.js"></script>
 
 	</body>

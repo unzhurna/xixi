@@ -31,7 +31,7 @@ $config['base_url'] = $root;
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -500,3 +500,11 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+
+/*
+|--------------------------------------------------------------------------
+| Custom Config
+|--------------------------------------------------------------------------
+*/
+$config['asset'] = $config['base_url'].'assets/';
