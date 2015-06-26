@@ -3,7 +3,7 @@
 <script>
     $(document).ready(function(){
        oTable = $('#grid-data').dataTable({
-            'sDom': '<"row"<"col-lg-2 tools"><"col-lg-4"l><"col-lg-6"f>r>t<"row"<"col-lg-6"i><"col-lg-6"p>>',
+            'sDom': '<"row"<"col-lg-3 tools"><"col-lg-3"l><"col-lg-6"f>r>t<"row"<"col-lg-6"i><"col-lg-6"p>>',
             'bProcessing': false,
             'bServerSide': false,
             'sAjaxSource': '<?php  if(isset($source)) echo $source; ?>',
@@ -32,17 +32,14 @@
         $('div.tools').html(
             '<div id="grid_data_length" class="dataTables_length">'+
                 '<label>'+
-                    '<div class="btn-group">'+
-                        '<button class="btn btn-default" title="Add" id="_delete">'+
-                            '<i class="icon-plus-sign"></i>'+
-                        '</button>'+
-                        '<button class="btn btn-default" title="Edit" id="_print">'+
-                            '<i class="icon-file"></i>'+
-                        '</button>'+
-                        '<button class="btn btn-default" title="Export" id="_test">'+
-                            '<i class="icon-plus-sign"></i>'+
-                        '</button>'+
-                    '</div>'+                    
+                    //'<div class="btn-group">'+
+                        '<button class="btn btn-default" title="Add">Add New</button>'+
+                        '<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">Bulk Action <span class="caret"></span></button>'+
+                        '<ul role="menu" class="dropdown-menu">'+
+                            '<li><a href="#">Another action</a></li>'+
+                            '<li><a href="#">Another action</a></li>'+
+                        '</ul>'+                        
+                    //'</div>'+                    
                 '</label>'+
             '</div>'
         );

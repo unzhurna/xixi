@@ -772,7 +772,7 @@ a:active {
 .header-search {
 	float: right;
 	position: relative;
-	margin-top: 13px;
+	margin-top: 5px;
 }
 .header-search .fa {
 	color: #333333;

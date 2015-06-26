@@ -5,7 +5,6 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-
     <!-- Meta -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -24,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo config_item('asset'); ?>css/responsive.css"/>
 
     <!-- Favicon -->
-    <link type="image/x-icon" href="images/favicon.png" rel="shortcut icon">
+    <link type="image/x-icon" href="<?php echo config_item('asset'); ?>img/favicon.png" rel="shortcut icon">
 
 </head>
 
@@ -110,56 +109,17 @@
                     </ul>
 
                 </nav>
-                <!-- Primary Navigation / End -->
-
-                <!-- Header Cart / Start -->
-                <div class="header-cart">
-                    <ul class="sf-menu">
-                        <li>
-                            <a href="cart_full.html"><i class="fa fa-shopping-cart"></i><span class="amount">&pound;128.00</span> (3 items)</a>
-                            <ul>
-                                <li class="desc">3 items in the shopping cart</li>
-                                <li class="clearfix">
-                                    <a href="product_full.html"><img src="images/demo/product1.jpg" alt="Product Name"/></a>
-                                    <a href="product_full.html" class="product-title">Flying Ninja</a>
-                                    <span class="quantity">Unit Price: $50.00</span>
-                                    <span class="quantity">Quantity: 1</span>
-                                    <a href="#" class="product-remove">x</a>
-                                </li>
-                                <li class="clearfix">
-                                    <a href="product_full.html"><img src="images/demo/product2.jpg" alt="Product Name"/></a>
-                                    <a href="product_full.html" class="product-title">Happy Ninja</a>
-                                    <span class="quantity">Unit Price: $50.00</span>
-                                    <span class="quantity">Quantity: 1</span>
-                                    <a href="#" class="product-remove">x</a>
-                                </li>
-                                <li class="clearfix">
-                                    <a href="product_full.html"><img src="images/demo/product3.jpg" alt="Product Name"/></a>
-                                    <a href="product_full.html" class="product-title">Premium Quality</a>
-                                    <span class="quantity">Unit Price: $28.00</span>
-                                    <span class="quantity">Quantity: 1</span>
-                                    <a href="#" class="product-remove">x</a>
-                                </li>                           
-                                <li class="clearfix">
-                                    <p class="cart-total">Subtotal <strong class="amount">&pound;128.00</strong></p>
-                                    <p><button class="add_to_cart_button">View Shopping Cart</button>
-                                    <button class="button">Proceed to Checkout</button></p>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul><!-- .sf-menu -->
-                </div>
-                <!-- Header Cart / End -->              
+                <!-- Primary Navigation / End --> 
 
             </div><!-- #primary-bar --> 
             
             <div id="logo">
-                <a href="index.html"><img src="images/logo.png" alt="Logo Title" /></a>
+                <a href="index.html"><img src="<?php echo config_item('asset'); ?>img/logo.png" alt="Logo Title" /></a>
                 <!-- <h1 class="site-title"><a href="index.html">SuperNews</a></h1> -->
             </div>
 
             <div class="header-ad">
-                <a href="#"><img src="images/728x90.png" alt=""/></a>
+                <a href="#"><img src="<?php echo config_item('asset'); ?>img/728x90.png" alt=""/></a>
             </div>
 
             <div class="clearfix"></div>
@@ -172,7 +132,7 @@
                 <!-- Secondary Navigation / Start -->
                 <nav id="secondary-nav">
                     <ul id="secondary-menu" class="sf-menu">
-                        <li class="home_item current_item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                        <li class="home_item"><a href=""><i class="fa fa-home"></i> Home</a></li>
                         <li>
                             <a href="#">Features</a>
                             <ol class="sf-mega links">
@@ -226,21 +186,21 @@
                                 <div class="cat-posts">
                                     <div class="post-list">
                                         <a class="clearfix" href="post.html">
-                                            <img class="entry-thumbnail" src="images/demo/37-150x85.jpg" alt="Post Title"/>
+                                            <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/37-150x85.jpg" alt="Post Title"/>
                                             <h2 class="entry-title">Nulla enim consequat amet congue</h2>
                                             <div class="entry-meta">28 Aug, 2014</div>                                          
                                         </a>
                                     </div><!-- .post-list -->
                                     <div class="post-list">
                                         <a class="clearfix" href="post.html">
-                                            <img class="entry-thumbnail" src="images/demo/38-150x85.jpg" alt="Post Title"/>
+                                            <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/38-150x85.jpg" alt="Post Title"/>
                                             <h2 class="entry-title">Euismod amet leo cras et massa</h2>
                                             <div class="entry-meta">28 Aug, 2014</div>                                          
                                         </a>
                                     </div><!-- .post-list -->                           
                                     <div class="post-list">
                                         <a class="clearfix" href="post.html">
-                                            <img class="entry-thumbnail" src="images/demo/35-150x85.jpg" alt="Post Title"/>
+                                            <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/35-150x85.jpg" alt="Post Title"/>
                                             <h2 class="entry-title">Tincidunt quam enim ac a pede</h2>
                                             <div class="entry-meta">28 Aug, 2014</div>                                          
                                         </a>
@@ -280,16 +240,10 @@
 
                 <div class="header-search">
 
-                    <i class="fa fa-search"></i>
-                    <i class="fa fa-times"></i>
-
-                    <div class="search-form">
-                        <form action="search.html" id="searchform" method="get">
+                    <form action="search.html" id="searchform" method="get">
                             <input name="s" type="text" />
-                            <button type="submit">Search</button>
+                            <button type="submit">Go</button>
                         </form>
-                    </div><!-- .search-form -->       
-
                 </div><!-- .header-search -->       
 
             </div>  
@@ -331,7 +285,7 @@
 
                             <li>
                                 <article class="hentry clearfix">
-                                    <a href="post.html"><img class="entry-thumbnail" src="images/demo/42-728x410.jpg" alt="Post Title"/></a>
+                                    <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/42-728x410.jpg" alt="Post Title"/></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">A New York City Travel Guide</a></h2>
                                     <div class="entry-meta">
                                         <span class="entry-stars"></span>               
@@ -352,7 +306,7 @@
                             <li>
                                 <article class="hentry clearfix">
 
-                                    <a href="post.html"><img class="entry-thumbnail" src="images/demo/45-728x410.jpg" alt="Post Title"/></a>
+                                    <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/45-728x410.jpg" alt="Post Title"/></a>
 
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">How to Become a Fashion Photographer</a></h2>
 
@@ -376,7 +330,7 @@
                             <li>
                                 <article class="hentry clearfix">
 
-                                    <a href="post.html"><img class="entry-thumbnail" src="images/demo/44-728x410.jpg" alt="Post Title"/></a>
+                                    <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/44-728x410.jpg" alt="Post Title"/></a>
 
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">Will It Shred: iPad Becomes a Skateboard</a></h2>
 
@@ -417,7 +371,7 @@
                     <ul class="clearfix">
 
                         <li>
-                            <a href="post.html"><img class="entry-thumbnail" src="images/demo/1-216x121.jpg" alt=""/></a>   
+                            <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/1-216x121.jpg" alt=""/></a>   
                             
                             <h2 class="entry-title"><a href="post.html">Local ice cream shop grand opening</a></h2>
                             
@@ -436,7 +390,7 @@
                         </li>
 
                         <li>
-                            <a href="post.html"><img class="entry-thumbnail" src="images/demo/2-216x121.jpg" alt=""/></a>   
+                            <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/2-216x121.jpg" alt=""/></a>   
                             
                             <h2 class="entry-title"><a href="post.html">Fruit chemical may prevent organ damage</a></h2>
                             
@@ -455,7 +409,7 @@
                         </li>
 
                         <li>
-                            <a href="post.html"><img class="entry-thumbnail" src="images/demo/3-216x121.jpg" alt=""/></a>
+                            <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/3-216x121.jpg" alt=""/></a>
                             
                             <h2 class="entry-title"><a href="post.html">Sailor's ship was hit by kamikaze</a></h2>
                             
@@ -479,7 +433,7 @@
                 <!-- Content Block #1 / End -->
 
                 <div class="content-ad">
-                    <a href="http://www.theme-junkie.com/"><img src="images/728x90.png" alt="Post Title"/></a>
+                    <a href="http://www.theme-junkie.com/"><img src="<?php echo config_item('asset'); ?>img/728x90.png" alt="Post Title"/></a>
                 </div><!-- .content-ad -->
 
                 <!-- Content Block #2 / Start -->
@@ -491,7 +445,7 @@
 
                         <li class="article-first">
 
-                            <a href="post_reviews.html"><img class="entry-thumbnail" src="images/demo/4-344x193.jpg" alt=""/></a>
+                            <a href="post_reviews.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/4-344x193.jpg" alt=""/></a>
                             
                             <h2 class="entry-title"><a href="post_reviews.html">UK new car sales hit 2m mark</a></h2>
                             
@@ -513,7 +467,7 @@
 
                         <li class="article-list">
 
-                            <a href="post_reviews.html"><img class="entry-thumbnail" src="images/demo/5-52x52.jpg" alt=""/></a>
+                            <a href="post_reviews.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/5-52x52.jpg" alt=""/></a>
 
                             <h2 class="entry-title"><a href="post_reviews.html">Tips for your house painting project</a></h2>
 
@@ -527,7 +481,7 @@
 
                         <li class="article-list">
 
-                            <a href="post_reviews.html"><img class="entry-thumbnail" src="images/demo/6-52x52.jpg" alt=""/></a>
+                            <a href="post_reviews.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/6-52x52.jpg" alt=""/></a>
 
                             <h2 class="entry-title"><a href="post_reviews.html">BDS students take the White House</a></h2>
 
@@ -541,7 +495,7 @@
 
                         <li class="article-list">
 
-                            <a href="post_reviews.html"><img class="entry-thumbnail" src="images/demo/7-52x52.jpg" alt=""/></a>
+                            <a href="post_reviews.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/7-52x52.jpg" alt=""/></a>
 
                             <h2 class="entry-title"><a href="post_reviews.html">Big plans for Seaview Marina</a></h2>
 
@@ -555,7 +509,7 @@
 
                         <li class="article-list">
 
-                            <a href="post_reviews.html"><img class="entry-thumbnail" src="images/demo/8-52x52.jpg" alt=""/></a>
+                            <a href="post_reviews.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/8-52x52.jpg" alt=""/></a>
 
                             <h2 class="entry-title"><a href="post_reviews.html">The changing pensions landscape</a></h2>
 
@@ -573,7 +527,7 @@
                 <!-- Content Block #2 / End -->
 
                 <div class="content-ad">
-                    <a href="http://www.theme-junkie.com/"><img src="images/728x90.png" alt=""/></a>
+                    <a href="http://www.theme-junkie.com/"><img src="<?php echo config_item('asset'); ?>img/728x90.png" alt=""/></a>
                 </div><!-- .content-ad --> 
 
                 <!-- Content Block #3 / Start -->
@@ -587,7 +541,7 @@
 
                             <li class="article-first">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/9-344x193.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/9-344x193.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">USA locations for sunrise sunset calendar</a></h2>
 
@@ -609,7 +563,7 @@
 
                             <li class="article-list clearfix">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/10-52x52.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/10-52x52.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">The world's best photos of hippotigris</a></h2>
 
@@ -622,7 +576,7 @@
 
                             <li class="article-list clearfix">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/11-52x52.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/11-52x52.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">Dell attempts to reinvent the desktop PC</a></h2>
 
@@ -635,7 +589,7 @@
 
                             <li class="article-list clearfix">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/12-52x52.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/12-52x52.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">The "Love Actually" guide to London</a></h2>
 
@@ -658,7 +612,7 @@
 
                             <li class="article-first">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/13-344x193.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/13-344x193.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">5 Unusual ways to stay fit and active</a></h2>
 
@@ -680,7 +634,7 @@
 
                             <li class="article-list clearfix">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/14-52x52.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/14-52x52.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">Robbie take long road to graduation</a></h2>
 
@@ -693,7 +647,7 @@
 
                             <li class="article-list clearfix">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/15-52x52.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/15-52x52.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">Lake Oahe's population improves</a></h2>
 
@@ -706,7 +660,7 @@
 
                             <li class="article-list clearfix">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/16-52x52.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/16-52x52.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">Missing Fryeburg woman returns home</a></h2>
 
@@ -725,7 +679,7 @@
                 <!-- Content Block #3 / End -->
 
                 <div class="content-ad">
-                    <a href="#"><img src="images/728x90.png" alt=""/></a>
+                    <a href="#"><img src="<?php echo config_item('asset'); ?>img/728x90.png" alt=""/></a>
                 </div><!-- .content-ad -->
 
                 <!-- Content Block #4 / Start -->
@@ -738,7 +692,7 @@
                         <ul>
                             <li class="article-first">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/17-216x121.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/17-216x121.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">Tips for getting started in travel writing</a></h2>
 
@@ -779,7 +733,7 @@
                         <ul>
                             <li class="article-first">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/18-216x121.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/18-216x121.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">4 Surprising health benefits of tea</a></h2>
 
@@ -820,7 +774,7 @@
                         <ul>
                             <li class="article-first">
 
-                                <a href="post.html"><img class="entry-thumbnail" src="images/demo/19-216x121.jpg" alt=""/></a>
+                                <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/19-216x121.jpg" alt=""/></a>
 
                                 <h2 class="entry-title"><a href="post.html">The world's best hotel restaurants in 2014</a></h2>
 
@@ -869,7 +823,7 @@
 
                     <ul>
                         <li>
-                            <a href="post.html"><img class="entry-thumbnail" src="images/demo/20-160x90.jpg" alt="Post Title"/></a>
+                            <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/20-160x90.jpg" alt="Post Title"/></a>
                             <h2 class="entry-title"><a href="post.html">Nullam dictum metus in metus auctor</a></h2>
                             <div class="entry-meta">
                                 <span class="entry-date">Sep. 15, 2014</span>
@@ -877,7 +831,7 @@
                         </li>
 
                         <li>
-                            <a href="post.html"><img class="entry-thumbnail" src="images/demo/21-160x90.jpg" alt="Post Title"/></a>
+                            <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/21-160x90.jpg" alt="Post Title"/></a>
                             <h2 class="entry-title"><a href="post.html">Fusce volutpat elementum augue felis</a></h2>
                             <div class="entry-meta">
                                 <span class="entry-date">Sep. 15, 2014</span>
@@ -885,7 +839,7 @@
                         </li>
 
                         <li>
-                            <a href="post.html"><img class="entry-thumbnail" src="images/demo/22-160x90.jpg" alt="Post Title"/></a>
+                            <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/22-160x90.jpg" alt="Post Title"/></a>
                             <h2 class="entry-title"><a href="post.html">Aenean efficitur enim vel ultrices laoreet</a></h2>
                             <div class="entry-meta">
                                 <span class="entry-date">Sep. 15, 2014</span>
@@ -893,7 +847,7 @@
                         </li>
 
                         <li>
-                            <a href="post.html"><img class="entry-thumbnail" src="images/demo/23-160x90.jpg" alt="Post Title"/></a>
+                            <a href="post.html"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/23-160x90.jpg" alt="Post Title"/></a>
                             <h2 class="entry-title"><a href="post.html">What are the benefits of eating oranges?</a></h2>
                             <div class="entry-meta">
                                 <span class="entry-date">Sep. 15, 2014</span>
@@ -910,7 +864,7 @@
                     <ul>
                         <li>
                             <a href="post.html#comments">
-                                <img class="avatar" src="images/demo/comment-avatar1.jpg" alt="Author Name"/>
+                                <img class="avatar" src="<?php echo config_item('asset'); ?>img/demo/comment-avatar1.jpg" alt="Author Name"/>
                                 <h3 class="name">Jack Lenox</h3>
                                 <div class="comment">
                                     If you make yourself an ass, don't complain if people ride you.
@@ -920,7 +874,7 @@
 
                         <li>
                             <a href="post.html#comments">
-                                <img class="avatar" src="images/demo/comment-avatar2.jpeg" alt="Author Name"/>
+                                <img class="avatar" src="<?php echo config_item('asset'); ?>img/demo/comment-avatar2.jpeg" alt="Author Name"/>
                                 <h3 class="name">Kevin Koehler</h3>
                                 <div class="comment">
                                     Keep good men company and you shall be of the number.
@@ -930,7 +884,7 @@
 
                         <li>
                             <a href="post.html#comments">
-                                <img class="avatar" src="images/demo/comment-avatar3.jpeg" alt="Author Name"/>
+                                <img class="avatar" src="<?php echo config_item('asset'); ?>img/demo/comment-avatar3.jpeg" alt="Author Name"/>
                                 <h3 class="name">Ben Lowery</h3>
                                 <div class="comment">
                                     Experience is the father of wisdom and memory the mother.
@@ -940,7 +894,7 @@
 
                         <li>
                             <a href="post.html#comments">
-                                <img class="avatar" src="images/demo/comment-avatar4.jpeg" alt="Author Name"/>
+                                <img class="avatar" src="<?php echo config_item('asset'); ?>img/demo/comment-avatar4.jpeg" alt="Author Name"/>
                                 <h3 class="name">Neha Gajjar</h3>
                                 <div class="comment">
                                     Happy is the man who learns from the misfortunes of others.
@@ -962,7 +916,7 @@
 
                 <div class="widget widget_ads">
                     <h3 class="widget-title">Sponsor</h3>
-                    <a href="#"><img src="images/ad_160x600.png" alt=""/></a>
+                    <a href="#"><img src="<?php echo config_item('asset'); ?>img/ad_160x600.png" alt=""/></a>
                 </div><!-- .widget .widget_ads -->
 
             </div>
@@ -973,7 +927,7 @@
 
                 <div class="widget widget_ads">
                     <h3 class="widget-title">Advertisement</h3>
-                    <a href="http://www.theme-junkie.com/" target="_blank"><img src="images/ad_300x250.png" alt="Ad Widget" /></a>
+                    <a href="http://www.theme-junkie.com/" target="_blank"><img src="<?php echo config_item('asset'); ?>img/ad_300x250.png" alt="Ad Widget" /></a>
                 </div><!-- .widget .widget_ads -->
 
                 <div class="widget widget_social clearfix">
@@ -1012,22 +966,22 @@
                         <div class="tab-content" id="tab1">
                             <ul>
                                 <li class="clearfix">
-                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="images/demo/41-64x64.jpg" alt="Post Title" /></a>
+                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/41-64x64.jpg" alt="Post Title" /></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">Nulla enim consequat amet congue</a></h2>
                                     <div class="entry-meta">16 Aug, 2014</div>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="images/demo/30-64x64.jpg" alt="Post Title" /></a>
+                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/30-64x64.jpg" alt="Post Title" /></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">Will It Shred: iPad Becomes a Skateboard</a></h2>
                                     <div class="entry-meta">15 Aug, 2014</div>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="images/demo/20-64x64.jpg" alt="Post Title" /></a>
+                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/20-64x64.jpg" alt="Post Title" /></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">Phasellus lorem aliquam</a></h2>
                                     <div class="entry-meta">14 Aug, 2014</div>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="images/demo/10-64x64.jpg" alt="Post Title" /></a>
+                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/10-64x64.jpg" alt="Post Title" /></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">Sed do eiusmod tempor incididunt</a></h2>
                                     <div class="entry-meta">13 Aug, 2014</div>
                                 </li>                                                   
@@ -1037,22 +991,22 @@
                         <div class="tab-content" id="tab2">
                             <ul>
                                 <li class="clearfix">
-                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="images/demo/20-64x64.jpg" alt="Post Title" /></a>
+                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/20-64x64.jpg" alt="Post Title" /></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">Fusce volutpat elementum augue felis</a></h2>
                                     <div class="entry-meta">16 Aug, 2014</div>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="images/demo/21-64x64.jpg" alt="Post Title" /></a>
+                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/21-64x64.jpg" alt="Post Title" /></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">Etiam maximus lacinia posuere nisl</a></h2>
                                     <div class="entry-meta">16 Aug, 2014</div>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="images/demo/22-64x64.jpg" alt="Post Title" /></a>
+                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/22-64x64.jpg" alt="Post Title" /></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">Aenean efficitur enim vel ultrices laoreet</a></h2>
                                     <div class="entry-meta">16 Aug, 2014</div>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="images/demo/23-64x64.jpg" alt="Post Title" /></a>
+                                    <a href="post.html" rel="bookmark"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/23-64x64.jpg" alt="Post Title" /></a>
                                     <h2 class="entry-title"><a href="post.html" rel="bookmark">What are the benefits of eating oranges?</a></h2>
                                     <div class="entry-meta">16 Aug, 2014</div>
                                 </li>                                                   
@@ -1062,19 +1016,19 @@
                         <div class="tab-content" id="tab3">
                             <ul>
                                 <li class="clearfix">
-                                    <a href="post.html#comments"><img class="entry-thumbnail" src="images/demo/comment-avatar1.jpg" alt="Author Name" /></a>
+                                    <a href="post.html#comments"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/comment-avatar1.jpg" alt="Author Name" /></a>
                                     <a href="post.html#comments"><strong>Jack Lenox</strong><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum...</span></a>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html#comments"><img class="entry-thumbnail" src="images/demo/comment-avatar2.jpeg" alt="Author Name" /></a>
+                                    <a href="post.html#comments"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/comment-avatar2.jpeg" alt="Author Name" /></a>
                                     <a href="post.html#comments"><strong>Kevin Koehler</strong><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum...</span></a>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html#comments"><img class="entry-thumbnail" src="images/demo/comment-avatar3.jpeg" alt="Author Name" /></a>
+                                    <a href="post.html#comments"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/comment-avatar3.jpeg" alt="Author Name" /></a>
                                     <a href="post.html#comments"><strong>Ben Lowery</strong><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum...</span></a>
                                 </li>
                                 <li class="clearfix">
-                                    <a href="post.html#comments"><img class="entry-thumbnail" src="images/demo/comment-avatar4.jpeg" alt="Author Name" /></a>
+                                    <a href="post.html#comments"><img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/comment-avatar4.jpeg" alt="Author Name" /></a>
                                     <a href="post.html#comments"><strong>Neha Gajjar</strong><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum...</span></a>
                                 </li>                                           
                             </ul>           
@@ -1099,7 +1053,7 @@
                 
                 <div class="widget widget_ads">
                     <h3 class="widget-title">Advertisement</h3>  
-                    <a href="http://www.theme-junkie.com/" target="_blank"><img src="images/ad_300x250_2.png" alt="Ad Widget" /></a>
+                    <a href="http://www.theme-junkie.com/" target="_blank"><img src="<?php echo config_item('asset'); ?>img/ad_300x250_2.png" alt="Ad Widget" /></a>
                 </div><!-- .widget .widget_ads -->
 
                 <div class="widget widget_twitter">
@@ -1113,10 +1067,10 @@
 
                 <div class="widget widget_125">
                     <h3 class="widget-title"><strong>Sponsors</strong></h3> 
-                    <a href="#"><img src="images/demo/125x125c.png" alt=""/></a>
-                    <a href="#"><img class="img-right" src="images/demo/125x125e.jpg" alt=""/></a>
-                    <a href="#"><img src="images/demo/125x125d.jpg" alt=""/></a>
-                    <a href="#"><img class="img-right" src="images/demo/125x125f.png" alt=""/></a>
+                    <a href="#"><img src="<?php echo config_item('asset'); ?>img/demo/125x125c.png" alt=""/></a>
+                    <a href="#"><img class="img-right" src="<?php echo config_item('asset'); ?>img/demo/125x125e.jpg" alt=""/></a>
+                    <a href="#"><img src="<?php echo config_item('asset'); ?>img/demo/125x125d.jpg" alt=""/></a>
+                    <a href="#"><img class="img-right" src="<?php echo config_item('asset'); ?>img/demo/125x125f.png" alt=""/></a>
                 </div><!-- .widget.widget_125 -->
 
                 <div class="widget">
@@ -1130,7 +1084,7 @@
                 
                 <div class="widget widget_ads">
                     <h3 class="widget-title">Advertisement</h3>  
-                    <a href="http://www.theme-junkie.com/" target="_blank"><img src="images/ad_300x600.jpeg" alt="Ad Widget" /></a>
+                    <a href="http://www.theme-junkie.com/" target="_blank"><img src="<?php echo config_item('asset'); ?>img/ad_300x600.jpeg" alt="Ad Widget" /></a>
                 </div><!-- .widget .widget_ads -->
 
             </div>
@@ -1150,7 +1104,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/24-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/24-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                            
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">What are the benefits of eating oranges?</a></h2>
@@ -1162,7 +1116,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/25-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/25-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                                                        
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">How much does it cost to rescue a horse?</a></h2>
@@ -1174,7 +1128,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/26-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/26-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                                                        
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">Lectures on mountain winter risks</a></h2>
@@ -1186,7 +1140,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/27-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/27-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                                                        
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">Sea Creatures: 100 waves to help a kid</a></h2>
@@ -1198,7 +1152,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/28-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/28-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                                                        
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">Top five most scathing book reviews</a></h2>
@@ -1210,7 +1164,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/29-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/29-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                                                        
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">Nulla enim consequat amet congue</a></h2>
@@ -1222,7 +1176,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/30-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/30-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                        
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">Euismod amet leo cras et massa</a></h2>
@@ -1234,7 +1188,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/31-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/31-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                            
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">Phasellus lorem aliquam</a></h2>
@@ -1246,7 +1200,7 @@
                         <li>
                             <article class="hentry post">
                                 <a class="video-thumbnail" href="post_video.html" rel="bookmark">
-                                    <img class="entry-thumbnail" src="images/demo/32-222x125.jpg" alt="Post Title" />
+                                    <img class="entry-thumbnail" src="<?php echo config_item('asset'); ?>img/demo/32-222x125.jpg" alt="Post Title" />
                                     <div class="video-icon"><i class="fa fa-play"></i></div>
                                 </a>                        
                                 <h2 class="entry-title"><a href="post.html" rel="bookmark">Tincidunt quam enim ac a pede</a></h2>
@@ -1282,21 +1236,21 @@
                     <h3 class="widget-title">Popular Posts</h3>
                     <ul>
                         <li>
-                            <a href="post.html" rel="bookmark"><img src="images/demo/44-52x52.jpg" class="entry-thumbnail" alt="Post Title" /></a>
+                            <a href="post.html" rel="bookmark"><img src="<?php echo config_item('asset'); ?>img/demo/44-52x52.jpg" class="entry-thumbnail" alt="Post Title" /></a>
                             <a href="post.html" rel="bookmark">How to skateboard for beginners</a>
                             <div class="entry-meta">
                                 <span class="entry-date">Sep. 15, 2014</span>
                             </div>                                  
                         </li>                   
                         <li>
-                            <a href="post.html" rel="bookmark"><img src="images/demo/17-52x52.jpg" class="entry-thumbnail" alt="Post Title" /></a>
+                            <a href="post.html" rel="bookmark"><img src="<?php echo config_item('asset'); ?>img/demo/17-52x52.jpg" class="entry-thumbnail" alt="Post Title" /></a>
                             <a href="post.html" rel="bookmark">Tips for getting started in travel writing</a>
                             <div class="entry-meta">
                                 <span class="entry-date">Sep. 15, 2014</span>
                             </div>  
                         </li>
                         <li>
-                            <a href="post.html" rel="bookmark"><img src="images/demo/34-52x52.jpg" class="entry-thumbnail" alt="Post Title" /></a>
+                            <a href="post.html" rel="bookmark"><img src="<?php echo config_item('asset'); ?>img/demo/34-52x52.jpg" class="entry-thumbnail" alt="Post Title" /></a>
                             <a href="post.html" rel="bookmark">New life for old building in East Rochester</a>
                             <div class="entry-meta">
                                 <span class="entry-date">Sep. 15, 2014</span>
@@ -1354,18 +1308,17 @@
     <!-- Page / End -->
 
     <!-- JavaScripts -->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery.matchHeight.js"></script>     
-    <script type="text/javascript" src="js/hoverIntent.js"></script>
-    <script type="text/javascript" src="js/superfish.js"></script>  
-    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-    <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
-    <script type="text/javascript" src="js/retina.js"></script>
-    <script type="text/javascript" src="js/jquery.sticky.js"></script>
-    <script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
-    <script type="text/javascript" src="js/jquery.custom.js"></script>
-    <script type="text/javascript" src="js/analytics.js"></script><!-- FOR DEMO ONLY --> 
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/jquery.matchHeight.js"></script>     
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/hoverIntent.js"></script>
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/superfish.js"></script>  
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/jquery.sidr.min.js"></script>
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/retina.js"></script>
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/jquery.sticky.js"></script>
+    <script type='text/javascript' src='<?php echo config_item('asset'); ?>js/jquery.prettyPhoto.js'></script>
+    <script type="text/javascript" src="<?php echo config_item('asset'); ?>js/jquery.custom.js"></script>
 
 </body>
 </html>

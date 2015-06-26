@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-12">
         <section class="panel">
-            <header class="panel-heading">Editable Table</header>
+            <header class="panel-heading">Articles</header>
             <div class="panel-body">
                 <div class="adv-table">
                     <table class="table table-striped table-hover table-bordered" id="grid-data">

@@ -1,3 +1,51 @@
+/*--- Confirmation Modal----*/
+function myConfirm(url) {
+	if ($("#confirmModal").length > 0) {
+		$("#confirmModal").remove();
+	}
+	divModal = $('<div class="modal fade bs-example-modal-sm" id="confirmModal">');
+	divModal.append (
+		'<div class="modal-dialog modal-sm">'+
+			'<div class="modal-content">'+
+				'<div class="modal-header">'+
+					'<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>'+
+					'<h4 class="modal-title"><i class="icon-exclamation-sign"></i> Confirmation</h4>'+
+				'</div>'+
+				'<div class="modal-body">'+
+					'<p>Are you sure want to delete?</p>'+
+				'</div>'+
+				'<div class="modal-footer">'+
+					'<button data-dismiss="modal" class="btn btn-default" type="button"><i class="icon-remove-circle"></i> No</button>'+
+	                '<a class="btn btn-info" href='+url+'><i class="icon-ok-circle"></i> Yes</a>'+
+				'</div>'+
+			'</div>'+
+		'</div>'
+	);
+	$('body').append(divModal);
+	$('#confirmModal').modal('show');
+	return false;
+}
+
+/*---Gritter Notification----*/
+function gritter_alert(message) {
+	var unique_id = $.gritter.add({
+		text: message,
+		sticky: false,
+		before_open: function(){
+			if($('.gritter-item-wrapper').length == 3)
+			{
+				return false;
+			}
+		}
+	});
+	setTimeout(function(){
+		$.gritter.remove(unique_id, {
+			fade: true,
+			speed: 'slow'
+		});
+	}, 5000);	
+}
+
 /*---LEFT BAR ACCORDION----*/
 $(function() {
     $('#nav-accordion').dcAccordion({

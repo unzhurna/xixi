@@ -7,6 +7,8 @@
 		<title>Administrator</title>
 		<link href="<?php echo config_item('asset'); ?>css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/font-awesome.css" rel="stylesheet">
+		<link href="<?php echo config_item('asset'); ?>css/jquery.gritter.css" rel="stylesheet">
+		<link href="<?php echo config_item('asset'); ?>css/redactor.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/DT_bootstrap.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/style.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/style-responsive.css" rel="stylesheet">
@@ -25,7 +27,7 @@
 							<div title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
 						</div>
 						<!--logo start-->
-						<a href="<?php echo site_url('/'); ?>" class="logo"><?php echo config_item('company_name'); ?><span></span></a>
+						<a href="<?php echo site_url('/'); ?>" class="logo"><img src="<?php echo config_item('asset'); ?>img/logo.png" alt="Logo Title" /></a>
 						<!--logo end-->						
 						<div class="top-nav ">
 							<ul class="nav pull-right top-menu">
@@ -56,19 +58,19 @@
 						<!-- sidebar menu start-->
 						<ul class="sidebar-menu" id="nav-accordion">
 							<li>
-								<a href="<?php echo site_url('/'); ?>"><i class="icon-dashboard"></i> <span>Dashboard</span></a>
+								<a class="<?php if($this->uri->segment(1) == 'dashboard') echo 'active' ?>" href="<?php echo site_url('/'); ?>"><i class="icon-dashboard"></i> <span>Dashboard</span></a>
 							</li>
+							<li>
+                                <a class="<?php if($this->uri->segment(1) == 'categories') echo 'active' ?>" href="<?php echo site_url('categories'); ?>"><i class="icon-dashboard"></i> <span>Category</span></a>
+                            </li>
+							<li>
+                                <a class="<?php if($this->uri->segment(1) == 'articles') echo 'active' ?>" href="<?php echo site_url('articles'); ?>"><i class="icon-dashboard"></i> <span>Article</span></a>
+                            </li>                            
 							<li class="sub-menu">
-								<a href="javascript:;" class="active"> <i class="icon-laptop"></i><span>Test</span></a>
+								<a href="javascript:;"> <i class="icon-laptop"></i><span>Tsst</span></a>
 								<ul class="sub">
-									<li class="active">
+									<li>
 										<a  href="boxed_page.html">Boxed Page</a>
-									</li>
-									<li>
-										<a  href="horizontal_menu.html">Horizontal Menu</a>
-									</li>
-									<li>
-										<a  href="language_switch_bar.html">Language Switch Bar</a>
 									</li>
 								</ul>
 							</li>
@@ -94,10 +96,15 @@
 				<!--footer end-->
 			</section>
 		</div>
+		
+		<!--myModal start-->
+        <div class="modal fade bs-example-modal-sm" id="myModal"></div>
+        <!--myModal end-->
 
 		<script src="<?php echo config_item('asset'); ?>js/jquery.js"></script>
 		<script src="<?php echo config_item('asset'); ?>js/bootstrap.min.js"></script>
 		<script src="<?php echo config_item('asset'); ?>js/jquery.dcjqaccordion.2.7.js"></script>
+		<script src="<?php echo config_item('asset'); ?>js/jquery.gritter.js"></script>
 		<script src="<?php echo config_item('asset'); ?>js/jquery.scrollTo.min.js"></script>
 		<script src="<?php echo config_item('asset'); ?>js/jquery.nicescroll.js"></script>
 		<script src="<?php echo config_item('asset'); ?>js/respond.min.js" ></script>
